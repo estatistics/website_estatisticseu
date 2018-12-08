@@ -1,0 +1,329 @@
+
+        
+	          
+ <script>
+	 
+	  $(document).ready(function(){
+		 language = localStorage.getItem('language');
+		   if (language == 'gr') { 
+		           var lang = "gr";
+		        document.getElementById('mainbody').setAttribute('class', lang);
+                document.getElementById('mainbody').setAttribute('lang', lang);
+		  }
+		   if (language == 'en') { 
+		           var lang = "en";
+		        document.getElementById('mainbody').setAttribute('class', lang);
+                document.getElementById('mainbody').setAttribute('lang', lang);
+		  }
+		 
+		 
+		  
+	      $("#lang_switch_gr").click(function(){
+			  langtext = "Ελληνικά"; 
+            var lang = "gr";
+            document.getElementById('mainbody').setAttribute('class', lang);
+            document.getElementById('mainbody').setAttribute('lang', lang);
+            localStorage.setItem('language', lang);
+            
+       });
+       
+      $("#lang_switch_en").click(function(){
+		      langtext = "English";
+            var lang = "en";
+            language = localStorage.getItem('language');
+            document.getElementById('mainbody').setAttribute('class', lang);
+            document.getElementById('mainbody').setAttribute('lang', lang);
+            localStorage.setItem('language', lang);
+            
+       });
+              
+      });
+    
+      
+ </script>
+		      
+		      
+		      
+		      
+	<!--      		  
+	 
+      $(document).ready(function(){
+        langtext = "English";
+        language = localStorage.getItem('language');
+        if (language) {
+          document.getElementById('mainbody').setAttribute('class', language);
+          document.getElementById('mainbody').setAttribute('lang', language);
+          if (language == 'gr') { langtext="Ελληνικά"; }
+          document.getElementById("lang-index").innerHTML=langtext+' <i class="fa fa-caret-down" aria-hidden="true"></i>';
+        }
+        $("#lang-selector>ul>li>a").click(function(){
+          var langid = this.id;
+          var selText = this.text;
+          document.getElementById('mainbody').setAttribute('class', langid);
+          document.getElementById('mainbody').setAttribute('lang', langid);
+          localStorage.setItem('language', langid);
+          $("#lang-selector>a").html(selText+' <i class="fa fa-caret-down" aria-hidden="true"></i>');
+        });
+      });
+    </script>
+-->
+
+
+
+
+
+
+<script>
+function deleteAllCookies(){
+   var cookies = document.cookie.split(";");
+   for (var i = 0; i < cookies.length; i++)
+     deleteCookie(cookies[i].split("=")[0]);
+}
+
+function setCookie(name, value, expirydays) {
+ var d = new Date();
+ d.setTime(d.getTime() + (expirydays*24*60*60*1000));
+ var expires = "expires="+ d.toUTCString();
+ document.cookie = name + "=" + value + "; " + expires;
+}
+
+function deleteCookie(name){
+  setCookie(name,"",-1);
+}
+</script>
+
+
+<script>
+$(document).ready(function() {
+     $('#tipue_search_input').tipuesearch();
+});
+</script>
+
+
+
+<script>
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+ var cookie_val = getCookie("cookieconsent_status");
+ 
+ 
+ if ( cookie_val == 'allow'  ) {
+      $('.cookie_freeze').css({ "position": "absolute" });  
+      $('.cookie_freeze').css({ "z-index":  "0" });  
+      $('.cookie_freeze').css({ "width":    "0" });  
+
+     }    else  {
+		 
+       if ( localStorage.length > 0 ) {  localStorage.clear();   } 
+       
+                  
+		 $(document).on('click', 'a.cc-allow', function(){
+      $('.cookie_freeze').css({ "position": "absolute" });  
+      $('.cookie_freeze').css({ "z-index":  "0" });  
+      $('.cookie_freeze').css({ "width":    "0" });  
+   });  
+      }
+      
+      
+  if ( cookie_val == ''  ) {
+         $('.cookie_freeze').css({ "background-color": "rgba(215, 255, 25, 0.1)" });   
+
+	}	 else  {
+			  
+		 $(document).on('click', 'a.cc-allow', function(){
+      $('.cookie_freeze').css({ "background-color": "rgba(215, 255, 25, 0)" });     
+      $('.cookie_freeze').css({ "position": "absolute" });  
+      $('.cookie_freeze').css({ "z-index":  "0" });  
+      $('.cookie_freeze').css({ "width":    "0" });  
+   });  
+   }
+
+</script>           
+
+
+
+ 
+ 
+<script>
+	
+window.addEventListener("load", function(){
+	          
+	 // "Delete" the previous pop up banner - so only one is appearing
+	 // in the related js, it was added the related "ID" 
+	 
+    if ( $('#cc-gp1').hasClass('cc-grower') ) {
+		 $("#cc-gp1").height(0);
+	    };
+  	$(document).ready(function(){
+     $('.cc-revoke').css({ "height":"0" }); 
+     $('.cc-revoke').closest('.cc-revoke').removeClass('cc-revoke');
+    });
+  
+
+ // Deleting cookies if "deny" is clicked 
+ $(document).on('click', 'a#deny.cc-btn.cc-deny', function(){
+  deleteAllCookies()
+	      }); 
+
+
+
+ $(document).ready(function(){
+ $("#mainbody").append($("#div.cc-revoke.cc-top.cc-animate.cc-color-override-180668369"));
+   });
+
+       var  customContent = {
+            "message": "Our website uses cookies to make your browsing " +
+                       "experience better. By using our site, you agree to use " +
+                       "the website's cookies:",
+            "link":    "Privacy Policy",
+            "allow":   "Allow",
+            "deny":    "Refuse - Exit", 
+            "dismiss": "Decline",
+            "policy":  "Revοke Cookie Acceptance",
+            "href":    "href"- "https://www.estatistics.eu/",
+            "href2":   "https://"  // added to the cookieconsent.min.js file
+    };
+ 
+
+
+    window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "dimgray",
+    },
+    "button": {
+      "background": "transparent",
+      "text":       "greenyellow",
+      "border":     "goldenrod"
+    }
+  },
+  "position":  "top",
+  "static":     true,
+  "type":      "opt-out",
+  "content":    customContent
+});
+
+
+
+ $("#lang_switch_en").click(function(){
+		          
+	 // "Delete" the previous pop up banner - so only one is appearing
+	 // in the related js, it was added the related "ID"
+    if ( $('#cc-gp1').hasClass('cc-grower') ) {
+		 $("#cc-gp1").height(0);
+	    };    
+  	$(document).ready(function(){
+     $('.cc-revoke').css({ "height":"0" }); 
+     $('.cc-revoke').closest('.cc-revoke').removeClass('cc-revoke');
+    });
+
+
+      var lang = "en";
+      document.getElementById('mainbody').setAttribute('class', lang);
+      document.getElementById('mainbody').setAttribute('lang', lang);
+ 
+       var  customContent = {
+            "message": "Our website uses cookies to make your browsing " +
+                       "experience better. By using our site, you agree to "+
+                       "use the website's cookies:",
+            "link":    "Privacy Policy",
+            "allow":   "Allow",
+            "deny":    "Refuse - Exit",
+            "dismiss": "Decline",
+            "policy":  "Revοke Cookie Acceptance",
+            "href":    "href"- "https://www.estatistics.eu/",
+            "href2":   "https://"                             // added to the cookieconsent.min.js file
+    };
+
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "dimgray",
+    },
+    "button": {
+      "background": "transparent",
+      "text":       "greenyellow",
+      "border":     "goldenrod"
+    }
+  },
+  "position":  "top",
+  "static":     true,
+  "type":      "opt-out",
+  "content":    customContent
+});
+  });
+            
+
+     $("#lang_switch_gr").click(function(){
+	          
+	 // "Delete" the previous pop up banner - so only one is appearing
+	 // in the related js, it was added the related "ID"
+    if ( $('#cc-gp1').hasClass('cc-grower') ) {
+         $("#cc-gp1").height(0);
+	    };
+	    
+    $(document).ready(function(){
+     $('.cc-revoke').css({ "height":"0" }); 
+     $('.cc-revoke').closest('.cc-revoke').removeClass('cc-revoke');
+    });
+    
+              
+	    
+        var lang = "gr";
+        document.getElementById('mainbody').setAttribute('class', lang);
+        document.getElementById('mainbody').setAttribute('lang', lang);
+
+          var  customContent = {
+            "message": "Η ιστοσελίδα κάνει χρήση 'cookies' για να κάνει την περιήγησή σας " +
+                       "καλύτερη. Με το να κάνετε χρήση της ιστοσελίδας, αποδέχεστε τα 'cookies' " +
+                       "της ιστοσελίδας:",
+            "link":    "Όροι Χρήσης",
+            "allow":   "Αποδέχομαι",
+            "deny":    "Αρνούμαι - Έξοδος",
+            "dismiss": "Απορρίπτω",
+            "policy":  "Αναθεώρηση αποδοχής cookies",
+            "href":    "href"- "https://www.estatistics.eu/",
+            "href2":   "https://" // added to the cookieconsent.min.js file
+    	}; 
+    	
+    	
+window.cookieconsent.initialise({
+
+  "palette": {
+    "popup": {
+      "background": "dimgray",
+    },
+    "button": {
+      "background": "transparent",
+      "text":       "greenyellow",
+      "border":     "goldenrod"
+    }
+  },
+  "position":  "top",
+  "static":     true,
+  "type":      "opt-out",
+  "content":    customContent
+});
+ 
+   });
+   
+
+  
+});
+
+</script>
+

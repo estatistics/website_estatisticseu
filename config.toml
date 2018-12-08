@@ -1,0 +1,9 @@
+baseURL = "https://localhost:1313/"
+title = "EstatisticEU"
+theme = "nofancy"
+pygmentsStyle = "native"
+
+languageCode = "en-us"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+

@@ -1,0 +1,641 @@
+/* 
+
+html :lang(gr) {
+  display: none;
+}
+
+html :lang(en) {
+  display: none;
+}
+
+  span[lang=en] {
+        display: none;
+      }
+      
+ span[lang=gr] {
+        display: none;
+      }
+ */
+
+body:not(.en) :lang(en), body:not(.gr) :lang(gr)  { display: none; }
+
+
+/* Html Lines */
+/* Html Lines */
+
+.horizonal_line_1 {
+    position:   relative;
+    height:     1px;
+    border:     0px;
+    top:        0px;
+    border-top: 3px solid lightgray;
+    margin:     0em 0;
+    padding:    0;
+}
+
+.horizonal_line_2 {
+
+}
+
+.vertical_line_1{
+    position:         fixed;  /* Freezing */
+    background-color: floralwhite;
+    width:            200px;
+    left:             0px;
+    top:              25px;
+    bottom:           10px;
+    border-left:      1px solid lightgray;
+}
+
+.vertical_line_2{
+    position:    fixed; /* Freezing */
+    left:        190px;
+    top:         30px;
+    bottom:      0px;
+    border-left: 1px solid lightgray;
+}
+
+.vertical_line_3{
+    position:    fixed;
+    left:        890px;
+    top:         30px;
+    bottom:      0px;
+    border-left: 2px solid lightgray;
+    color:       red;
+    
+}
+
+
+/* Drawing a "box" to include the main body */
+
+.main_body {
+    background:     white;
+    position:       relative;
+    left:           200px;
+    top:            30px;
+    bottom:         0;
+    right:          0;
+    white-space:    wrap; 
+    width:          660px; 
+    overflow:       hidden;
+    border:         0px;
+    z-index:        1;
+
+}
+
+
+/* Specific formats of elements */
+
+a.video {
+    text-decoration: none;
+}
+
+a.pigi {
+    text-decoration: none;
+}
+
+
+
+
+
+.cookie_freeze {
+   position:              fixed;  /* Freezing */
+   display:               grid;
+   width:                 890px;
+   z-index:               8888;
+   left:                  0px;
+}
+
+
+/* Info services formatting */
+
+.info_services {
+  position:       relative;
+}
+
+.info_services_grid {
+  display:               grid;
+  grid-template-columns: auto auto auto;
+  background-color:      rgba(255, 255, 255, 0);
+  padding-left:          10px;
+  font-size:             12px;
+}
+
+.info_services_grid_items {
+  background-color: rgba(255, 255, 255, 0);
+  border:           0px solid rgba(0, 0, 0, 0.8);
+  padding-left:     20px;
+  font-size:        30px;
+  text-align:       center;
+}
+
+.info_items_space {
+  font-size:        20px;
+}
+
+
+.info_paid {
+  margin-left:      220px;
+  font-size:        21px;
+  color:            green;
+
+}
+
+.info_wavepaid {
+  color:            black;
+}
+
+.info_subpaid {
+  margin-left:      25px;
+  color:            black;
+  font-weight:      normal;
+  
+}
+
+.info_head {
+  margin-left:      15px;
+  color: blue;
+}
+
+.info_subhead {
+  color:           black;
+  font-weight:     bold;
+  display:         inline;
+  }
+
+
+.info_sub2paid{
+  color:            purple;
+}
+
+.info_inline {
+  margin-left:      20px;
+  font-weight:      normal;
+}
+
+.info_line {
+ font-weight:       bold;
+ color:             green;
+ 
+}
+
+
+.iframe_contact {
+   z-index:        9;
+   border:         none;
+   margin-top:     0px;
+   width:          660px; 
+   height:         760px; 
+}
+
+.space_contact_gr_1 {
+   margin-left:    153px;
+
+}
+.space_contact_en_1 {
+   margin-left:     86px;
+
+}
+
+
+/* Flags format */
+
+.greek_flag {
+
+opacity:          1;
+filter:           alpha(opacity=100);
+background-color: rgba(255, 255, 255, 0);
+background:       rgba(255, 255, 255, 0);
+float:            center;	
+}
+
+
+.uk_flag {
+
+opacity:          1;
+filter:           alpha(opacity=100);
+background-color: rgba(255, 255, 255, 0);
+background:       rgba(255, 255, 255, 0);
+float:            center;	
+}
+
+
+
+
+
+
+
+
+
+/* footer - Creative Commons Copyright section */
+
+
+
+.footer_section  {
+    background-color: mistyrose;
+    position:         relative;
+    left:             0px;
+    top:              300px;
+    white-space:      wrap; 
+    width:            880px; 
+    overflow:         hidden;
+    border:           0px;
+    z-index:          0;
+
+}
+
+
+.horizontal_line {
+  background-color: mistyrose;
+  font-size:        25px;
+  font-weight:      bold;
+  color:            green;
+
+}
+
+
+
+/* Info footer formatting */
+
+
+.info_footer_grid {
+  display:               grid;
+  grid-template-columns: auto auto auto;
+  background-color:      rgba(255, 255, 255, 0);
+  padding-left:          25px;
+  padding-top:           10px;
+}
+
+.info_footer_grid_items {
+  background-color: rgba(255, 255, 255, 0);
+  border:           0px solid rgba(0, 0, 0, 0.8);
+  font-size:        14px; 
+
+
+}
+
+.info_footer_head {
+  font-size:        15px;
+  margin-left:      0px;
+  color:            green;
+}
+
+.info_footer_items {
+   text-decoration:  none; /* no underscored link */
+
+}
+
+
+.cc0{
+  margin-left:       10px;
+  margin-right:      10px;
+}
+
+
+.design {
+   text-decoration: none; /* no underscored link */
+}
+
+.copyright {
+
+   margin-top:      5px;
+   margin-bottom:   5px;
+}
+
+.year {
+   margin-left:      5px;
+   margin-top:      -20px;
+   margin-bottom:   -10px;
+}
+
+.year_0 {
+   margin-left:      10px;
+}
+
+.author_name {
+   text-decoration: none; /* no underscored link */
+}
+
+.creative_commons_image_link {
+   text-decoration: none; /* no underscored link */
+}
+
+.creative_common_text {
+  font-size:        12px;
+}
+
+.creative_common_text_exceptions {
+  font-size:        11px;
+}
+
+.hoster {
+  text-decoration:  none; /* no underscored link */
+  font-size:        11px;
+}
+
+
+
+
+/* Terms of Use formatting */
+
+.terms_head {
+  font-weight:       20px;
+  font-size:         20px;
+  color:            green;
+}
+
+.terms_subhead {
+  font-weight:       bold;
+  font-size:         15px;
+  color:            black;
+}
+
+.terms_body {
+  text-align: justify;
+  
+}
+
+
+
+
+
+
+
+
+/* left links formatting */
+
+
+.left_link_index {
+
+}
+
+
+.__left_links {
+  display:               grid;
+  grid-template-columns: repeat(auto-fill,auto);
+  grid-gap:              10px;          /*This add space between elements, only works on grid items*/
+  margin-top:   40px;
+  margin-left:  30px;
+}
+
+.__left_links a {
+ text-decoration: none;
+}
+
+
+
+/* Keywords formatting */
+
+.keywords {
+ margin-left:    0px;
+ width:          162px;
+ color:          olive;
+ font-weight:    normal;
+ font-style:     italic;
+ font-size:      80%;
+ 
+}
+
+.p_keywords {
+ margin-top:   80px;
+ margin-left:  0px;
+ color:        black;
+ 
+}
+
+
+
+
+/*  CSS for Main pages  */
+/*  CSS for Main pages  */
+
+
+.Statistics_page {
+
+    background:     blue;
+    position:       relative;
+    left:           0px;
+    top:            0px;
+    height:         1320px;
+    right:          0px;
+    white-space:    wrap; 
+    width:          100%; 
+    overflow-y:     hidden;
+    border:         0px;
+    z-index:        1;
+}
+
+.Statistics_htmlfile_page {
+    background:     white;
+    position:       relative;
+    overflow-wrap:  break-word;
+    color:          blue;
+}
+
+.biohistory {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+
+.R_Code_PSPP_page {
+    background:     black;
+    position:       relative;
+    left:           0px;
+    top:            0px;
+    height:         1320px;
+    right:          0px;
+    white-space:    wrap; 
+    width:          100%; 
+    overflow-y:     hidden;
+    border:         0px;
+    z-index:        1;
+}
+
+.R_Code_PSPP_htmlfile_page {
+    background:     white;
+    position:       relative;
+    overflow-wrap:  break-word;
+    color:          blue;
+}
+
+
+
+
+.Stat_Article_page {
+    background:     blue;
+    position:       relative;
+    left:           0px;
+    top:            0px;
+    height:         1320px;
+    right:          0px;
+    white-space:    wrap; 
+    width:          100%; 
+    overflow-y:     hidden;
+    border:         0px;
+    z-index:        1;
+}
+
+.Stat_Article_htmlfile_page {
+    background:     white;
+    position:       relative;
+    overflow-wrap:  break-word;
+    color:          blue;
+}
+
+
+
+.Planets_Health_page {
+    background:     white;
+    position:       relative;
+    left:           0px;
+    top:            0px;
+    height:         1000px;
+    width:          100%;
+    white-space:    wrap; 
+    overflow-wrap:  break-word;
+    overflow-x:     hidden;
+    border:         0px;
+}
+
+.Planets_Health_htmlfile_page {
+    background:     white;
+    position:       relative;
+    overflow-wrap:  break-word;
+    color:          black;
+}
+
+
+
+
+.Services_page {
+    background:     green;
+    position:       relative;
+    left:           0px;
+    top:            0px;
+    height:         1320px;
+    right:          0px;
+    white-space:    wrap; 
+    width:          100%; 
+    overflow-y:     hidden;
+    border:         0px;
+    z-index:        1;
+}
+
+.services_htmlfile_page {
+    background:     white;
+    position:       relative;
+    overflow-wrap:  break-word;
+    color:          red;
+}
+
+
+
+/* General formats */
+
+.no_decoration {
+  text-decoration:  none; /* no underscored link */
+}
+
+p.two_lines {
+    margin-top:      5px;
+}
+
+.two_gaps {
+    margin-top:      40px;
+}
+
+.two_spaces {
+    margin-left:      10px;
+}
+
+
+    
+    
+/* Freezing Topbar */
+
+.freezing_topbar {
+  display:            inline-block;
+  position:           fixed;
+  top:                0px;
+  width:              100%;
+  height:             20px;          
+  z-index:            5;
+}
+
+
+
+/* Language and Search bar style */
+/* Language and Search bar style */
+
+
+
+.tipue_search_input {
+    background-position: absolute;
+    background-color:    GhostWhite;
+    width:               8%;
+    float:               center;	
+    padding:             0px 0px;
+}
+
+
+.tipue_search_button {
+
+}
+
+
+
+
+
+/* top bar style */
+/* top bar style */
+
+
+/* Add a background color to the top navigation */
+.topnavigation {  
+    background-position:fixed;
+    background-color:   GhostWhite;
+    width:              100%;
+    overflow:           auto;
+    z-index:            10;
+
+}
+
+/* Style the links inside the navigation bar */
+.topnavigation a {
+    float:           left;	
+    text-align:      center;
+    padding:         0px 10px;
+    text-decoration: none; /* no underscored link */
+    font-size:       17px;
+}
+
+/* background settings (??) */
+.topnavigation background {
+
+}
+
+/* Change the color of links on hover */
+.top_links a:hover {
+    background-color:     lightgreen;
+    color:                black;
+}
+
+/* Add a color to the active / current link */
+.top_links a.active {
+    background-color:     green;
+    color:                green;
+}
+
+.top_links .color {
+    color:                black;
+}
+
+.topnav_estatistics {
+    letter-spacing:       4px;
+    color:                green;
+    overflow:             hidden;
+}
+
+
